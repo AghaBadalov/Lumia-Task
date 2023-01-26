@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ip9Tjr2Qdvp/KV/+HTV8n6O3ZxywoA46LKGSAr439fA=",
+  "Hash": "Th9oNCypUSgWYTA07krpFdini35Q5gZXeIj08S1w3uM=",
   "Source": "LumiaTask",
   "BasePath": "_content/LumiaTask",
   "Mode": "Default",
@@ -33286,12 +33286,12 @@
       "OriginalItemSpec": "wwwroot\\manage\\vendor\\jquery-easing\\jquery.easing.min.js"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\LumiaTask\\LumiaTask\\wwwroot\\uploads\\teams\\ba89f9ef-00c2-4ba3-9bb0-60c96474e2bfteam-1.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\LumiaTask\\LumiaTask\\wwwroot\\uploads\\teams\\007b1f9d-3e38-474a-ab9f-67cf30625256team-3.jpg",
       "SourceId": "LumiaTask",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\User\\Desktop\\LumiaTask\\LumiaTask\\wwwroot\\",
       "BasePath": "_content/LumiaTask",
-      "RelativePath": "uploads/teams/ba89f9ef-00c2-4ba3-9bb0-60c96474e2bfteam-1.jpg",
+      "RelativePath": "uploads/teams/007b1f9d-3e38-474a-ab9f-67cf30625256team-3.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33300,15 +33300,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\teams\\ba89f9ef-00c2-4ba3-9bb0-60c96474e2bfteam-1.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\teams\\007b1f9d-3e38-474a-ab9f-67cf30625256team-3.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\Desktop\\LumiaTask\\LumiaTask\\wwwroot\\uploads\\teams\\cc9d03f0-85f6-4d55-ab90-761019e6a746team-3.jpg",
+      "Identity": "C:\\Users\\User\\Desktop\\LumiaTask\\LumiaTask\\wwwroot\\uploads\\teams\\01780c02-fb56-42e6-9f57-6bd5503c7997team-2.jpg",
       "SourceId": "LumiaTask",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\User\\Desktop\\LumiaTask\\LumiaTask\\wwwroot\\",
       "BasePath": "_content/LumiaTask",
-      "RelativePath": "uploads/teams/cc9d03f0-85f6-4d55-ab90-761019e6a746team-3.jpg",
+      "RelativePath": "uploads/teams/01780c02-fb56-42e6-9f57-6bd5503c7997team-2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33317,7 +33317,58 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\teams\\cc9d03f0-85f6-4d55-ab90-761019e6a746team-3.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\teams\\01780c02-fb56-42e6-9f57-6bd5503c7997team-2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\LumiaTask\\LumiaTask\\wwwroot\\uploads\\teams\\2035ffcb-8260-49fe-ab6b-37c41295624bteam-1.jpg",
+      "SourceId": "LumiaTask",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\LumiaTask\\LumiaTask\\wwwroot\\",
+      "BasePath": "_content/LumiaTask",
+      "RelativePath": "uploads/teams/2035ffcb-8260-49fe-ab6b-37c41295624bteam-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\teams\\2035ffcb-8260-49fe-ab6b-37c41295624bteam-1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\LumiaTask\\LumiaTask\\wwwroot\\uploads\\teams\\3b5b5b46-6d57-41ec-b7ff-fe5e6a02a29fteam-3.jpg",
+      "SourceId": "LumiaTask",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\LumiaTask\\LumiaTask\\wwwroot\\",
+      "BasePath": "_content/LumiaTask",
+      "RelativePath": "uploads/teams/3b5b5b46-6d57-41ec-b7ff-fe5e6a02a29fteam-3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\teams\\3b5b5b46-6d57-41ec-b7ff-fe5e6a02a29fteam-3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\LumiaTask\\LumiaTask\\wwwroot\\uploads\\teams\\e0301f67-31ec-4e69-a56f-bd494fe3ca05team-2.jpg",
+      "SourceId": "LumiaTask",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\LumiaTask\\LumiaTask\\wwwroot\\",
+      "BasePath": "_content/LumiaTask",
+      "RelativePath": "uploads/teams/e0301f67-31ec-4e69-a56f-bd494fe3ca05team-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\teams\\e0301f67-31ec-4e69-a56f-bd494fe3ca05team-2.jpg"
     }
   ]
 }

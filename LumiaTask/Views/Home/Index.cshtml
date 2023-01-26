@@ -1,4 +1,5 @@
-﻿ <!-- ======= Hero Section ======= -->
+﻿@model List<Team>
+ <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
         <div class="container text-center text-md-left" data-aos="fade-up">
             <h1>Welcome to <span>Lumia</span></h1>
@@ -493,56 +494,35 @@
                 </div>
 
                 <div class="row">
+                    @foreach (var item in Model)
+                {
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="member">
-                            <img src="~/assets/img/team/team-1.jpg" alt="">
-                            <h4>Walter White</h4>
-                            <span>Chief Executive Officer</span>
+                            <img src="~/uploads/teams/@item.ImageUrl" alt="">
+                            <h4>@item.Name</h4>
+                            <span>@item.Profession.Name</span>
                             <p>
-                                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                                @item.Desc
                             </p>
                             <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
+                                @if(item.TTUrl!=null){
+                                    <a href="@item.TTUrl"><i class="bi bi-twitter"></i></a>
+                                }
+                                @if(item.FBUrl!=null){
+                                    <a href="@item.FBUrl"><i class="bi bi-facebook"></i></a>
+                                }@if(item.IGUrl!=null){
+                                    <a href="@item.IGUrl"><i class="bi bi-instagram"></i></a>
+                                }@if (item.LNUrl != null)
+                                {
+                                    <a href="@item.LNUrl"><i class="bi bi-linkedin"></i></a>
+                                }
+                                
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="member">
-                            <img src="~/assets/img/team/team-2.jpg" alt="">
-                            <h4>Sarah Jhinson</h4>
-                            <span>Product Manager</span>
-                            <p>
-                                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                            </p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="member">
-                            <img src="~/assets/img/team/team-3.jpg" alt="">
-                            <h4>William Anderson</h4>
-                            <span>CTO</span>
-                            <p>
-                                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                            </p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                }
+                    
 
                 </div>
 

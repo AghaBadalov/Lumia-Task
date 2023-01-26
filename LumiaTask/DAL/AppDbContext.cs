@@ -13,6 +13,7 @@ namespace LumiaTask.DAL
         public DbSet<Profession> Professions { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<AppUser> Users { get; set; }
+        public DbSet<Setting> Settings { get; set; }
 
 
     }

@@ -1,6 +1,7 @@
 using LumiaTask.Areas.manage.Services;
 using LumiaTask.DAL;
 using LumiaTask.Models;
+using LumiaTask.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<NormalLayoutService>();
 builder.Services.AddScoped<LayoutService>();
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {

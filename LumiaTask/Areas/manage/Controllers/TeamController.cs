@@ -18,10 +18,34 @@ namespace LumiaTask.Areas.manage.Controllers
             _context = context;
             _env = env;
         }
-        public IActionResult Index()
+        public IActionResult Index(int page=1)
         {
-            List<Team> teams = _context.Teams.Include(x => x.Profession).ToList();
-            return View(teams);
+            //List<Team> teams = _context.Teams.Include(x => x.Profession).Where(x=>x.IsDeleted==false).ToList();
+            var query = _context.Teams.Include(x => x.Profession).Where(x => x.IsDeleted == false).AsQueryable();
+            PaginatedList<Team> teams1 = PaginatedList<Team>.Create(query, 2, page);
+            return View(teams1);
+        }
+        public IActionResult DeletedTeam(int page = 1)
+        {
+            var query = _context.Teams.Include(x => x.Profession).Where(x=>x.IsDeleted==true).AsQueryable();
+            PaginatedList<Team> teams1 = PaginatedList<Team>.Create(query, 2, page);
+            return View(teams1);
+        }
+        public IActionResult SoftDelete(int id)
+        {
+            Team team=_context.Teams.FirstOrDefault(x=>x.Id==id);
+            if (team == null) return NotFound();
+            team.IsDeleted=true;
+            _context.SaveChanges();
+            return RedirectToAction("index");
+        }
+        public IActionResult Repair(int id)
+        {
+            Team team = _context.Teams.FirstOrDefault(x => x.Id == id);
+            if (team == null) return NotFound();
+            team.IsDeleted = false;
+            _context.SaveChanges();
+            return RedirectToAction("DeletedTeam");
         }
         public IActionResult Create()
         {
@@ -37,17 +61,17 @@ namespace LumiaTask.Areas.manage.Controllers
             if(team.ImageFile == null)
             {
                 ModelState.AddModelError("ImageFile", "Can't be null");
-                return View();
+                return View(team);
             }
             if(team.ImageFile.ContentType!="image/png" && team.ImageFile.ContentType != "image/jpeg")
             {
                 ModelState.AddModelError("ImageFile", "Wrong file type");
-                return View();
+                return View(team);
             }
             if(team.ImageFile.Length> 2097152)
             {
                 ModelState.AddModelError("ImageFile", "Only 2mb or lower files");
-                return View();
+                return View(team);
             }
 
             team.ImageUrl = team.ImageFile.SaveFile(_env.WebRootPath, "uploads/teams");
@@ -85,12 +109,12 @@ namespace LumiaTask.Areas.manage.Controllers
                 if (team.ImageFile.ContentType != "image/png" && team.ImageFile.ContentType != "image/jpeg")
                 {
                     ModelState.AddModelError("ImageFile", "Wrong file type");
-                    return View();
+                    return View(team);
                 }
                 if (team.ImageFile.Length > 2097152)
                 {
                     ModelState.AddModelError("ImageFile", "Only 2mb or lower files");
-                    return View();
+                    return View(team);
                 }
 
                 exstteam.ImageUrl = team.ImageFile.SaveFile(_env.WebRootPath, "uploads/teams");
@@ -117,7 +141,7 @@ namespace LumiaTask.Areas.manage.Controllers
             }
             _context.Teams.Remove(team);    
             _context.SaveChanges();
-            return RedirectToAction("index");
+            return RedirectToAction("DeletedTeam");
 
         }
     }

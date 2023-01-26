@@ -5,7 +5,6 @@
 }
 <table class="table">
     <thead>
-        <a asp-action="create" asp-controller="team"  class="btn btn-success">Create</a>
 
         <tr>
             <th scope="col">#</th>
@@ -40,10 +39,10 @@
                     <img style="max-width:100px" src="~/uploads/teams/@item.ImageUrl" class="img-fluid" alt="">
                 </td>
                 <td>
-                    <a asp-action="update" asp-controller="team" asp-route-id="@item.Id" class="btn btn-primary">Update</a>
-                    <a asp-action="softdelete" asp-controller="team" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    <a asp-action="repair" asp-controller="team" asp-route-id="@item.Id" class="btn btn-success">Repair</a>
+                    <a asp-action="delete" asp-controller="team" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
 
-                    </td>
+                </td>
             </tr>
 
         }
@@ -53,16 +52,18 @@
     <form>
         <nav aria-label="Page navigation example">
             <ul class="pagination">
-               @if(Model.HasPrevious){
+                @if (Model.HasPrevious)
+                {
                     <li class="page-item"><a class="page-link" asp-action="index" asp-route-page="@(Model.ActivePage-1)">Previous</a></li>
-               }
+                }
                 @for (int i = 1; i <= Model.TotalPageCount; i++)
                 {
                     <li class="page-item @((Model.ActivePage==i)? "active" : "")"><a class="page-link" asp-route-page="@i">@i</a></li>
                 }
-               
-                @if(Model.HasNext){
-                        <li class="page-item"><a class="page-link" asp-action="index" asp-route-page="@(Model.ActivePage+1)">Next</a></li>
+
+                @if (Model.HasNext)
+                {
+                    <li class="page-item"><a class="page-link" asp-action="index" asp-route-page="@(Model.ActivePage+1)">Next</a></li>
                 }
             </ul>
         </nav>
