@@ -1,0 +1,50 @@
+﻿@model List<Team>
+@{
+    int counter = 0;
+}
+<table class="table">
+    <thead>
+        <a asp-action="create" asp-controller="team"  class="btn btn-success">Create</a>
+
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Profession</th>
+            <th scope="col">Desc</th>
+            <th scope="col">IG</th>
+            <th scope="col">FB</th>
+            <th scope="col">TT</th>
+            <th scope="col">LN</th>
+            <th scope="col">image</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            counter++;
+            <tr>
+                <th scope="row">@counter</th>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Profession.Name</td>
+
+                <td>@item.Desc</td>
+                <td>@item.IGUrl</td>
+                <td>@item.FBUrl</td>
+                <td>@item.TTUrl</td>
+                <td>@item.LNUrl</td>
+                <td>
+                    <img style="max-width:100px" src="~/uploads/teams/@item.ImageUrl" class="img-fluid" alt="">
+                </td>
+                <td>
+                    <a asp-action="update" asp-controller="team" asp-route-id="@item.Id" class="btn btn-primary">Update</a>
+                    <a asp-action="delete" asp-controller="team" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+
+                    </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
